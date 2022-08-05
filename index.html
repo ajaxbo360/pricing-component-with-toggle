@@ -1,52 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- importing fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-  Our Pricing
-  Annually
-  Monthly
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="bg-1"></div>
+    <div class="bg-2"></div>
+    <section class="our-pricing wrapper">
+      <!-- our pricing toggle-->
 
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
+      <h1 class="our-pricing__heading">Our Pricing</h1>
+      <div class="our-pricing__toggle">
+        <span>Annually</span>
+        <div class="our-pricing__toggle__mode">
+          <div
+            class="our-pricing__toggle__mode__btn"
+            onclick="AnimatedToggle()"
+          ></div>
+        </div>
+        <span>Monthly</span>
+      </div>
 
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <!-- our pricing cards-->
+      <section class="our-pricing__card">
+        <div class="our-pricing__card__basic">
+          <h2 class="our-pricing__card__basic__heading">Basic</h2>
+          <h3 class="our-pricing__card__basic__price" id="isChanged-1">
+            199.99
+          </h3>
+          <p>500 GB Storage</p>
+          <p>2 Users Allowed</p>
+          <p>Send up to 3 GB</p>
+          <a href="#">learn more</a>
+        </div>
+      </section>
+      <section class="our-pricing__card">
+        <div class="our-pricing__card__professional">
+          <h2 class="our-pricing__card__professional__heading">Professional</h2>
+          <h3 class="our-pricing__card__professional__price" id="isChanged-2">
+            249.99
+          </h3>
+
+          <p>1 TB Storage</p>
+          <p>5 Users Allowed</p>
+          <p>Send up to 10 GB</p>
+          <a href="#">learn more</a>
+        </div>
+      </section>
+      <section class="our-pricing__card">
+        <div class="our-pricing__card__master">
+          <h2 class="our-pricing__card__master__heading">Master</h2>
+          <h3 class="our-pricing__card__master__price" id="isChanged-3">
+            399.99
+          </h3>
+          <p>2 TB Storage</p>
+          <p>10 Users Allowed</p>
+          <p>Send up to 20 GB</p>
+          <a href="#">learn more</a>
+        </div>
+      </section>
+    </section>
+    <script src="app/js/main.js"></script>
+  </body>
 </html>
